@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Add your CSS file here -->
+	<link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>WrldFuture</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left" style="display: flex; align-items: center;">
+                <img src="images/logo.png" width="40" height="40" style="margin-right: 5px;"/><a href="#" class="navbar-logo">WrldFuture</a>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-links">
+                    <li><a href="wrldFuture.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="position: relative;height: auto; overflow: hidden;">
+        <video id="vid" style="width: 100%; height: auto; object-fit: cover;" autoplay muted loop playsinline preload="metadata">
+            <source src="images/Welcome.mp4">
+        </video>
+        <div class="toggle" onclick="muteunmutetoggle()">
+            <i id="icon" class="fas fa-volume-mute"></i>
+        </div>
+        <a class="gotoproducts" href="#products" style="width:auto; position: absolute; top:80%; left:0; background: #44444473; border-radius: 5px; margin-left: 5px; padding:5px;color:whitesmoke;cursor:pointer;text-decoration: none;" >
+            <h2>Go to the next level ✨🚀</h2>
+            <h4>Make your business futuristic marvel</h4>
+        </a>
+    </section>
+    <!-- Featured Products Section -->
+<section class="featured-products" id="products">
+    <h2>Featured Products</h2>
+    <div class="product-cards">
+        <!-- Product Card 1 -->
+        <div class="product-card" style="cursor:pointer" onclick="window.open('fr.html', '_self')">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h3>Full revolutionization plan</h3>
+            <p><span style="color:red; text-decoration: line-through;margin-right: 10px;"> $500 </span><span style="color:green;font-weight: bold;"> $300 </span> <sub style="color: #f39c12; font-weight: bold;">40%</sub> <sub>off</sub></p>
+            <p style="text-align: left;padding:10px;">The Comprehensive Revolutionization Strategy serves as our pathway to embracing the AI Era and embarking upon a journey into the future</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card" style="cursor:pointer" onclick="window.open('menu.html', '_self')">
+            <img src="images/product2.jpg" alt="Product 2">
+            <h3>Digital menu</h3>
+            <p><span style="color:red; text-decoration: line-through;margin-right: 10px;"> $100 </span><span style="color:green;font-weight: bold;"> $79 </span> <sub style="color: #f39c12; font-weight: bold;">20%</sub> <sub>off</sub></p>
+            <p style="text-align: left;padding:10px;">Optimize sustainability, professionalism, and futurism with our eco-friendly digital menu service, reducing print costs and environmental impact.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+
+        <div class="product-card" style="cursor:pointer" onclick="window.open('web.html', '_self')">
+            <img src="images/product3.jpg" alt="Product 3">
+            <h3>Digital Presence</h3>
+            <p><span style="color:red; text-decoration: line-through;margin-right: 10px;"> $300 </span><span style="color:green;font-weight: bold;"> $159 </span> <sub style="color: #f39c12; font-weight: bold;">50%</sub> <sub>off</sub></p>
+            <p style="text-align: left;padding:10px;">Expand your presence and tap into a global audience of 5-6 billion active internet users with our comprehensive website and Android app package.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+
+        <div class="product-card" style="cursor:pointer" onclick="window.open('future.html', '_self')">
+            <img src="images/product4.jpg" alt="Product 4">
+            <h3>Embracing the future</h3>
+            <p><span style="color:red; text-decoration: line-through;margin-right: 10px;"> $300 </span><span style="color:green;font-weight: bold;"> $159 </span> <sub style="color: #f39c12; font-weight: bold;">50%</sub> <sub>off</sub></p>
+            <p style="text-align: left;padding:10px;">Integerate advanced technologies in your business (voice controlled databases, computer vision, robotics etc..)</p>
+            <br>
+            <button class="cta-button">Learn More</button>
+        </div>
+
+        <!-- Add more product cards here -->
+    </div>
+</section>
+    <script>
+        var vid = document.getElementById("vid")
+        function muteunmutetoggle(){
+            if(vid.muted){
+                vid.currentTime = 0
+                vid.muted = false
+                document.getElementById("icon").className = "fas fa-volume-high"
+            }
+            else{
+                vid.muted = true
+                document.getElementById("icon").className = "fas fa-volume-mute"
+            }
+        };
+    </script>
+</body>
+</html>
